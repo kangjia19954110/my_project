@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="uft-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/banner.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.fsbanner, .fsbanner > div > span{
+				display: none;
+			}
+
+		div.fsbanner{
+			position: relative;
+			overflow: hidden;
+			height: 300px;
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+			border-radius: 5px;
+		}
+		.fsbanner > div{
+			position: absolute;
+			background-size: cover;
+
+			cursor: pointer;;
+			top: 0;
+			left: 0;
+		}
+		.fsbanner > div .name{
+			display: block;
+			position: absolute;
+			left: 10px;
+			bottom: 10px;
+		}
+		.fsbanner > div .name.mininized{
+			transform: rotate(-90deg);
+			transform-origin: left top 0;
+			bottom: -13px;
+			left: 7px;
+		}
+		.container{
+			margin: 10px auto;
+			max-width: 768px;
+		}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>ONE</h1>
+			<div class="fsbanner" id="demo-1">
+				<div style="background-image:url(img/a1.png);"></div>
+				<div style="background-image:url(img/a2.png);"></div>
+				<div style="background-image:url(img/a3.png);"></div>
+				<div style="background-image:url(img/a4.png);"></div>
+			</div>
+			<h1>TWO</h1>
+			<div class="fsbanner" id="demo-2">
+				<div style="background-image:url(img/a1.png);"><span class="name">Image1</span></div>
+				<div style="background-image:url(img/a2.png);"><span class="name">Image2</span></div>
+				<div style="background-image:url(img/a3.png);"><span class="name">Image3</span></div>
+				<div style="background-image:url(img/a4.png);"><span class="name">Image4</span></div>
+			</div>
+			<h1>THREE</h1>
+			<div class="fsbanner" id="demo-3">
+				<div style="background-image:url(img/a1.png);"><span class="name">Image1</span></div>
+				<div style="background-image:url(img/a2.png);"><span class="name">Image2</span></div>
+				<div style="background-image:url(img/a3.png);"><span class="name">Image3</span></div>
+				<div style="background-image:url(img/a4.png);"><span class="name">Image4</span></div>
+			</div>
+
+		</div>           
+	</body>
+</html>
+
+<script type="text/javascript">
+	$('#demo-1').fsBanner();
+	$('#demo-2').fsBanner();
+	$('#demo-3').fsBanner({'trigger':'mouse'});
+</script>
